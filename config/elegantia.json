@@ -1,0 +1,6 @@
+{
+  "default_enabled_resource_packs": [
+    "emogg:builtin",
+    "emogg:twemogg"
+  ]
+}

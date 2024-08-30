@@ -1,0 +1,33 @@
+{
+  "enable_debug_mode": false,
+  "enable_atlas_debug_hud": false,
+  "enable_custom_shaders": true,
+  "frequently_used_emojis": [
+    {
+      "emoji_name": "kekw",
+      "use_points": 19,
+      "is_under_remove_protection": true
+    },
+    {
+      "emoji_name": "sussy",
+      "use_points": 7,
+      "is_under_remove_protection": true
+    },
+    {
+      "emoji_name": "smile",
+      "use_points": 5,
+      "is_under_remove_protection": true
+    },
+    {
+      "emoji_name": "pepecross",
+      "use_points": 4,
+      "is_under_remove_protection": true
+    },
+    {
+      "emoji_name": "troll",
+      "use_points": 2,
+      "is_under_remove_protection": true
+    }
+  ],
+  "hidden_category_names": []
+}
