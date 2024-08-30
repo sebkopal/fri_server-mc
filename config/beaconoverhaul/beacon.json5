@@ -1,0 +1,102 @@
+{
+    // List of addition modifiers
+    // Variables:
+    // - blocks: the number of blocks of this specific type.
+    additionModifiers: {
+        "minecraft:copper_block": "(blocks)^0.45 * 2",
+        "minecraft:iron_block": "(blocks)^0.6 * 2",
+        "minecraft:gold_block": "(blocks)^0.95 * 0.5",
+        "minecraft:amethyst_block": "min(blocks, 8) * 8",
+        "minecraft:emerald_block": "(blocks)^0.95",
+        "minecraft:diamond_block": "(blocks)^0.75 * 5"
+    },
+    // List of multiplication modifiers
+    multiplicationModifiers: {
+        "minecraft:netherite_block": "1 + (blocks * 0.05)"
+    },
+    // An expression to compute the range of the beacon.
+    // Variables:
+    // - pts: the points of the associated beacon.
+    range: "min(10 + pts * 2, 4096)",
+    // An expression to compute the duration of the beacon.
+    // Variables:
+    // - pts: the points of the associated beacon.
+    duration: "10 + pts / 15",
+    // An expression to compute the amplifier of the primary effect of the beacon.
+    // Variables:
+    // - pts: the points of the associated beacon.
+    // - isPotent: whether the effect is a potent effect. 1 when the selected secondary effect is for extra potency, 0 otherwise.
+    primaryAmplifier: "if(pts > 256, if(pts > 512, 3, 2), 1) + isPotent",
+    // An expression to compute the amplifier of the secondary effect of the beacon.
+    // Variables:
+    // - pts: the points of the associated beacon.
+    // - isPotent: whether the effect is a potent effect. Always 0.
+    secondaryAmplifier: "1",
+    // The maximum number of layers the beacon can have
+    maxBeaconLayers: 6,
+    // A list of status effects that can never exceed level 1
+    levelOneStatusEffects: [
+        "minecraft:fire_resistance",
+        "minecraft:slow_falling",
+        "minecraft:night_vision"
+    ],
+    // A list of blocks that can be in the base of the beacon
+    beaconBaseBlocks: [
+        "minecraft:copper_block",
+        "minecraft:iron_block",
+        "minecraft:gold_block",
+        "minecraft:amethyst_block",
+        "minecraft:emerald_block",
+        "minecraft:diamond_block",
+        "minecraft:netherite_block"
+    ],
+    // The different tiers of effects
+    beaconEffectsByTier: {
+        // A list of available effects at tier 1
+        tierOne: [
+            "minecraft:speed",
+            "minecraft:haste"
+        ],
+        // A list of available effects at tier 2
+        tierTwo: [
+            "minecraft:resistance",
+            "minecraft:jump_boost",
+            "beaconoverhaul:long_reach"
+        ],
+        // A list of available effects at tier 3
+        tierThree: [
+            "minecraft:strength",
+            "beaconoverhaul:nutrition",
+            "minecraft:health_boost"
+        ],
+        // A list of available secondary effects
+        secondaryEffects: [
+            "minecraft:regeneration",
+            "minecraft:fire_resistance",
+            "minecraft:slow_falling",
+            "minecraft:night_vision"
+        ]
+    },
+    // The amount of time before the base of the beacon is re-computed. An ISO-8601 representation of a duration.
+    // TODO: Make this a more reasonable format
+    beaconUpdateDelay: "PT4S",
+    // The amount of time before the base of the beacon is initially re-computed. An ISO-8601 representation of a duration.
+    // TODO: Make this a more reasonable format
+    initialBeaconUpdateDelay: "PT0.500S",
+    // If beacon effects should show particles.
+    effectParticles: false,
+    // The maximum number of blocks that a beam can be redirected horizontally.
+    redirectionHorizontalMoveLimit: 64,
+    // If tinted glass should make the beacon beam transparent.
+    allowTintedGlassTransparency: true,
+    // The update frequency of the beacon beam, in ticks.
+    beamUpdateFrequency: 4,
+    // The radius of the beacon beam.
+    beamRadius: 0.2,
+    // The radius of the beacon beam glow.
+    beamGlowRadius: 0.25,
+    // The opacity of the beacon beam glow.
+    beamGlowOpacity: 0.125,
+    // The width of the blended area for beacon beam transitions.
+    beamBlendPadding: 0.125
+}

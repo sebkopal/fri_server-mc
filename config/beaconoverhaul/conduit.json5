@@ -1,0 +1,8 @@
+{
+    // If conduit effects should show particles.
+    effectParticles: false,
+    // An expression to compute the range of the conduit.
+    // Variables:
+    // - tier: the tier of the associated conduit.
+    range: "1"
+}
